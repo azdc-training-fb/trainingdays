@@ -4,7 +4,7 @@
 param env string = 'devd4'
 
 var cosmosAccount = 'cosmos-scm-${env}-${uniqueString(resourceGroup().id)}'
-var location = resourceGroup().location
+var location = 'eastus' //resourceGroup().location
 
 // CosmosDB Account
 resource cosmos 'Microsoft.DocumentDB/databaseAccounts@2021-03-15' = {
